@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* *The top part of the css is css reset untill you get to body. */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -42,12 +45,11 @@ table {
     border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* *This is where the reset css stops */
 
 body{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    background-color:#60a9ff;
+    background-color:#7fb1eb;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,13 +59,80 @@ body{
 
 #panel-section{
     width: 90%;
-    height: 75vh;
+    height: 65vh;
     background-color: whitesmoke;
+    margin-top: 50px;
+    padding-top: 20px ;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    
 }
+
+#page-title h1{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+#page-title p{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+
+}
+
+
+#panel-section div{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.panel-img{
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.panel-header{
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.panel-features{
+    margin: 25px 0 15px;
+    color: #0d3c75;
+}
+
+.panel-features li{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: .75rem;
+    line-height: 2;
+    padding: 5px 0;
+    border-top: 1px solid #c5c8ca ;
+}
+
+.panel-button{
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #016ff9;
+    display: inline-block;
+    padding: 5px 20px;
+    font: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0 10px;
+    text-decoration: none;
+    transition: background-color 300ms ease-in-out;
+}
+
+.panel-button:hover{
+    background-color: #cddeec;
+
+}
+
+
 
 @media screen and (max-width:850px){
     body{box-sizing: border-box;
@@ -74,18 +143,33 @@ body{
     height: 1200px;
     }
 
+    #page-title h1{
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    #page-title p{
+        text-align: center;
+        font-family: 'Lobster', cursive;
+    
+    }
+
     #panel-section{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
         text-align: center;
         height: 100%;
-        width: 100%;
+        width: 80%;
+    }
+
+    #panel-section div{
+        border-bottom: 2px dotted grey;
 
     }
-    
-    
-    
-    
-    
+
+    #panel-section div:last-child{
+        border-bottom: none;
+    }
 }
